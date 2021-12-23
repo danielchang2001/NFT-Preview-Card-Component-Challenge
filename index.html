@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .img {
+      position: relative;
+      width:100%; 
+      text-align:center; 
+      border-radius: 10px;
+    }
+    .imgHover {
+      position: absolute;
+      left: 153px;
+      top: 153px;
+      opacity: 0;
+    }
+    .title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      text-align: left;
+      margin-left: 6px;
+      margin-right: 6px;
+      font-size: 22px;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      color: hsl(0, 0%, 100%);
+    }
+    .description {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      text-align: left;
+      margin-left: 6px;
+      margin-right: 6px;
+      font-size: 18px;
+      color: hsl(215, 51%, 70%);
+    }
+    .time {
+      font-family: 'Outfit', sans-serif;
+      margin-left: 6px;
+      margin-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      color: hsl(215, 51%, 70%);
+    }
+    .icon1 {
+      position: relative;
+      top: 2.5px;
+      margin-right: 2px;
+    }
+    .icon2 {
+      position: relative;
+      top: 2.5px;
+      margin-right: 2px;
+    }
+    .line {
+      height: 1px;
+      background: hsl(215, 32%, 27%);
+      margin-left: 6px;
+      margin-right: 6px;
+      color: hsl(215, 32%, 27%);
+    }
+    .credit {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300px;
+      margin-top: 0px;
+      margin-left: 6px;
+      margin-right: 6px;
+      font-size: 16px;
+      color: hsl(215, 51%, 70%);
+      text-align: left;
+    }
+    .avatar {
+      position: relative;
+      top: 10px;
+      border: 1px solid hsl(0, 0%, 100%);
+      border-radius: 100px;
+      margin-right: 12px;
+      width: 30px;
+    }
+    .attribution { color: white; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .card {
+      /* Add shadows to create the "card" effect */
+      position: relative;
+      top: 25%;
+      transform: translateY(25%);
+      background-color: hsl(216, 50%, 16%);
+      margin: auto;
+      text-align: center;
+      width: 350px;
+      height: 625px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .title:hover {
+      color:hsl(178, 100%, 50%);
+      cursor: grab;
+    }
+    .title:hover {
+      color:hsl(178, 100%, 50%);
+      cursor: grab;
+    }
+    .name {
+      color: hsl(0, 0%, 100%);
+    }
+    .name:hover{
+      color:hsl(178, 100%, 50%);
+      cursor: grab;
+    }
+    .images {
+      display: inline-block;
+      margin-top: 22px;
+      width: 88%;
+      background-color: hsl(178, 100%, 50%);
+      border-radius: 11px;
+      height: 308px;
+    }
+    .images:hover .img{
+      cursor: grab;
+      opacity: 0.5;
+      transition: 0.1s;
+    }
+    .images:hover .imgHover{
+      cursor: grab;
+      opacity: 1;
+      transition: 0.1s;
+    }
+
+    /* Add some padding inside the card container */
+    .container {
+      padding: 2px 16px;
+    }
+  </style>
+</head>
+<body style="background-color: hsl(217, 54%, 11%);">
+  <div class="card">
+    <div class="images">
+      <img class="img" src="images/image-equilibrium.jpg" alt="">
+      <img class="imgHover" src="images/icon-view.svg" alt="">
+    </div>
+    <div class="container">
+      <h4 class="title"><b>Equilibrium #3429</b></h4>
+      <p class="description">Our Equilibrium collection promotes balance and calm.</p>
+      <p class="time">
+        <span style="color: hsl(178, 100%, 50%); font-weight: 400;">
+          <img class="icon1" src="images/icon-ethereum.svg" alt="">
+          0.041 ETH</span>
+        <a style="color: hsl(215, 51%, 70%); font-weight: 300;">
+          <img class="icon2" src="images/icon-clock.svg" alt="">
+          3 days left</a>
+      </p>
+      <hr class="line">
+      <p class="credit">
+        <img class="avatar" src="images/image-avatar.png" alt="">
+        Creation of <span class="name">Jules Wyvern</span></p>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Daniel C</a>.
+  </div>
+</body>
+</html>
